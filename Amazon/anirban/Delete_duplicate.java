@@ -1,3 +1,4 @@
+package Amazon.anirban;
 /* Remove duplicate elements from sorted Array
 Given a sorted array A of size N. The function remove_duplicate takes two arguments . The first argument is the sorted array A[ ] and the second argument is 'N' the size of the array and returns the size of the new converted array A[ ] with no duplicate element.
 
@@ -34,8 +35,6 @@ Note:The Input/Ouput format and Example given are used for system's internal pur
 Link:https://www.geeksforgeeks.org/remove-duplicates-sorted-array/ */
 
 import java.util.Scanner;
-import java.util.*;
-import java.util.HashSet;
 
 class Delete_Duplicate
 {
@@ -50,7 +49,7 @@ class Delete_Duplicate
 			for(int i=0; i<N; i++)
 				a[i] = sc.nextInt();
 			
-			GfG g = new GfG();
+			GfG2 g = new GfG2();
 			int n = g.remove_duplicate(a,N);
 			
 			for(int i=0; i<n; i++)
@@ -64,7 +63,7 @@ class Delete_Duplicate
 }// } Driver Code Ends
 
 
-class GfG
+class GfG2
 {
         /*You are required to complete this function */
 	int remove_duplicate(int a[], int N)

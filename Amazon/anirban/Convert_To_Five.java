@@ -1,4 +1,4 @@
-/* Replace all 0's with 5
+package Amazon.anirban;/* Replace all 0's with 5
 You are given an integer N. You need to convert all zeroes of N to 5.
 
 Example 1:
@@ -29,12 +29,11 @@ Constraints:
 
 
 
-Link ::::https://www.geeksforgeeks.org/replace-0-5-input-integer/
+//Link ::::https://www.geeksforgeeks.org/replace-0-5-input-integer/
 
 
 
 import java.util.Scanner;
-import java.lang.Math;
 
 class Convert_To_Five {
     public static void main(String args[]) {
@@ -42,14 +41,14 @@ class Convert_To_Five {
         int T = sc.nextInt();
         while (T > 0) {
             int N = sc.nextInt();
-            System.out.println(new GfG().convertfive(N));
+            System.out.println(new GfG1().convertfive(N));
             T--;
         }
     }
 }// } Driver Code Ends
 
 
-class GfG {
+class GfG1 {
     int convertfive(int num) {
        return num+=convertFiveUtility(num);
     }
