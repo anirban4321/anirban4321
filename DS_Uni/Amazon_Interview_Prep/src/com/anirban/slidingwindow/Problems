@@ -1,0 +1,14 @@
+Sliding Window types:
+
+Fixed:1. Max/min subarray of size k
+2.Ist -ve in every min size of k
+3.count occurance of anagram
+4.Max of all subarray of size k
+5.Max of min for every window size
+
+
+Variable:1. Largest/Smallest subarray of sum k
+2. largest subarray of k distinct character
+3. length of largest substring with no repeating character
+4. pick toy
+5.Minimum window substring
