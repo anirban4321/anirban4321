@@ -1,4 +1,4 @@
-package com.anirban.Stack;
+package DS_Uni.Amazon_Interview_Prep.src.com.anirban.Stack;
 
 import java.util.Stack;
 

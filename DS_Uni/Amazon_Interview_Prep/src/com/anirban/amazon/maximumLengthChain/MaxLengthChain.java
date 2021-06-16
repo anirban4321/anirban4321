@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class MaxLengthChain {
 
-  public static int maxChainLength(Pair arr[], int n) {
+  public static int maxChainLength(com.anirban.amazon.maximumLengthChain.Pair arr[], int n) {
     int max = 1;
     Arrays.sort(arr, Comparator.comparingInt(o -> o.x));
 

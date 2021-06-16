@@ -1,4 +1,4 @@
-package com.anirban.recursion;
+package DS_Uni.Amazon_Interview_Prep.src.com.anirban.recursion;
 
 import java.util.Stack;
 
@@ -8,7 +8,7 @@ public class sortStack {
     Stack<Integer> stack = new Stack<>();
     stack.push(3);
     stack.push(2);
-    stack.push(5);
+    stack.push(5);//7 1 5 2 3
     stack.push(1);
     stack.push(7);
     Stack<Integer> a = sort(stack);

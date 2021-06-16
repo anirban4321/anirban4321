@@ -1,4 +1,4 @@
-package com.anirban.recursion;
+package DS_Uni.Amazon_Interview_Prep.src.com.anirban.recursion;
 
 import java.util.ArrayList;
 
@@ -43,39 +43,39 @@ class RatInMaze {
   }
 
   public static ArrayList<String> printPathUtil(
-      int[][] m, int n, int row, int col, String path, boolean[][] visited, ArrayList<String> list) {
-    if (row == n - 1 && col == n - 1 && m[row][col] == 1) {
+      int[][] matrix, int n, int row, int col, String path, boolean[][] visited, ArrayList<String> list) {
+    if (row == n - 1 && col == n - 1 && matrix[row][col] == 1) {
       list.add(path);
       return list;
     }
-    if (row == 0 && col == 0 && m[row][col] == 0)
+    if (row == 0 && col == 0 && matrix[row][col] == 0)
       return list;
     visited[row][col] = true;
-    if (isSafe(m, n, row + 1, col, visited)) {
+    if (isSafe(matrix, n, row + 1, col, visited)) {
       //System.out.println(path);
       path += "D";
-      printPathUtil(m, n, row + 1, col, path, visited, list);
+      printPathUtil(matrix, n, row + 1, col, path, visited, list);
       path = path.substring(0, path.length() - 1);
     }
 
-    if (isSafe(m, n, row, col - 1, visited)) {
+    if (isSafe(matrix, n, row, col - 1, visited)) {
       //System.out.println(path);
       path += "L";
-      printPathUtil(m, n, row, col - 1, path, visited, list);
+      printPathUtil(matrix, n, row, col - 1, path, visited, list);
       path = path.substring(0, path.length() - 1);
     }
 
-    if (isSafe(m, n, row, col + 1, visited)) {
+    if (isSafe(matrix, n, row, col + 1, visited)) {
       //System.out.println(path);
       path += "R";
-      printPathUtil(m, n, row, col + 1, path, visited, list);
+      printPathUtil(matrix, n, row, col + 1, path, visited, list);
       path = path.substring(0, path.length() - 1);
     }
 
-    if (isSafe(m, n, row - 1, col, visited)) {
+    if (isSafe(matrix, n, row - 1, col, visited)) {
       // System.out.println(path);
       path += "U";
-      printPathUtil(m, n, row - 1, col, path, visited, list);
+      printPathUtil(matrix, n, row - 1, col, path, visited, list);
       path = path.substring(0, path.length() - 1);
     }
     visited[row][col] = false;
