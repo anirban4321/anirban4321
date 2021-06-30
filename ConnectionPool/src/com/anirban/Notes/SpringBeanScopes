@@ -1,0 +1,9 @@
+stateless beans:
+                -beans that are singleton and are initialized only once.
+                -The only state they have is a shared state.
+                -These beans are created while the ApplicationContext is being initialized.
+                -The SAME bean instance will be returned/injected during the lifetime of this ApplicationContext. .
+
+stateful beans:
+                -beans that can carry state (instance variables).
+                -These are created every time an object is required.

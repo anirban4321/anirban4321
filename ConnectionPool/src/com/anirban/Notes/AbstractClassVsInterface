@@ -1,0 +1,56 @@
+Interface:
+
+–> If your child classes should all implement a certain group of methods/functionalities
+but each of the child classes is free to provide its own implementation then use interfaces.
+
+For e.g. if you are implementing a class hierarchy for vehicles implement an interface called Vehicle
+which has properties like Colour MaxSpeed etc. and methods like Drive().
+All child classes like Car Scooter AirPlane SolarCar etc. should derive from this base interface
+but provide a seperate implementation of the methods and properties exposed by Vehicle.
+
+–> If you want your child classes to implement multiple unrelated functionalities
+in short multiple inheritance use interfaces.
+
+For e.g. if you are implementing a class called SpaceShip
+that has to have functionalities from a Vehicle as well as that from a UFO
+then make both Vehicle and UFO as interfaces and then create a class SpaceShip
+that implements both Vehicle and UFO .
+
+Abstract Classes
+
+–> When you have a requirement where your base class should provide default implementation
+of certain methods whereas other methods should be open to being overridden by child classes
+use abstract classes.
+
+For e.g. again take the example of the Vehicle class above.
+If we want all classes deriving from Vehicle to implement the Drive() method in a fixed way
+whereas the other methods can be overridden by child classes.
+In such a scenario we implement the Vehicle class as an abstract class with an implementation of Drive while
+leave the other methods / properties as abstract so they could be overridden by child classes.
+
+–> The purpose of an abstract class is to provide
+a common definition of a base class that multiple derived classes can share.
+
+For example a class library may define an abstract class
+that is used as a parameter to many of its functions and require programmers
+using that library to provide their own implementation of the class by creating a derived class.
+
+Use an abstract class
+1.When creating a class library which will be widely distributed or reused—especially to clients,
+use an abstract class in preference to an interface; because, it simplifies versioning.
+This is the practice used by the Microsoft team which developed the Base Class Library. ( COM was designed around interfaces.)
+2.Use an abstract class to define a common base class for a family of types.
+3.Use an abstract class to provide default behavior.
+4.Subclass only a base class in a hierarchy to which the class logically belongs.
+
+
+Use an interface
+1.When creating a standalone project which can be changed at will, use an interface in preference
+to an abstract class;
+because, it offers more design flexibility.
+2.Use interfaces to introduce polymorphic behavior without subclassing and to model
+multiple inheritance—allowing a specific type to support numerous behaviors.
+3.Use an interface to design a polymorphic hierarchy for value types.
+4.Use an interface when an immutable contract is really intended.
+5.A well-designed interface defines a very specific range of functionality.
+Split up interfaces that contain unrelated functionality.
